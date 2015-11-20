@@ -1,0 +1,34 @@
+{
+  "name": "angular-google-adsense",
+  "version": "0.1.0",
+  "description": "Integrate your google adsense advertisements in your AngularJS applications easily.",
+  "homepage": "https://github.com/Stegoo/angular-google-adsense",
+  "main": "dist/angular-google-adsense.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": [
+    "Alexandre Nucera <alexandre.nucera@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Stegoo/angular-google-adsense.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://revolunet.mit-license.org"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "*",
+    "grunt": ">=0.4.0",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "load-grunt-tasks": "~3.3.0"
+  }
+}
