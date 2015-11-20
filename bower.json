@@ -20,6 +20,11 @@
   "author": [
     "Alexandre Nucera <alexandre.nucera@gmail.com>"
   ],
+  "ignore": [
+    "**/.*",
+    "src",
+    "Gruntfile.js"
+  ],
   "dependencies": {
     "angular": ">=1.2.0"
   },
