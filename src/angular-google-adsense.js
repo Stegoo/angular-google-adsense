@@ -29,7 +29,13 @@
 
                     Adsense.isAlreadyLoaded = true;
                 }
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                /**
+                 * We need to wrap the call the AdSense in a $apply to update the bindings.
+                 * Otherwise, we get a 400 error because AdSense gets literal strings from the directive
+                 */
+                $timeout(function(){
+                     (window.adsbygoogle = window.adsbygoogle || []).push({});
+                });
             }]
         };
     });
