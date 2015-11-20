@@ -26,6 +26,8 @@
                     s.src = Adsense.url;
                     s.async = true;
                     document.body.appendChild(s);
+
+                    Adsense.isAlreadyLoaded = true;
                 }
                 (window.adsbygoogle = window.adsbygoogle || []).push({});
             }]

@@ -1,6 +1,6 @@
 {
   "name": "angular-google-adsense",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Integrate your google adsense advertisements in your AngularJS applications easily.",
   "homepage": "https://github.com/Stegoo/angular-google-adsense",
   "main": "dist/angular-google-adsense.js",
