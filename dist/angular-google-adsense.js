@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('angular-google-analytics', []).
+    angular.module('angular-google-sense', []).
 
     service('Adsense', [function(){
         this.url = 'http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';

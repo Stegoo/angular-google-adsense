@@ -13,7 +13,7 @@ Or alternatively, grab the dist/angular-google-adsense.min.js and include it in 
 In your application, declare the angular-google-analytics module dependency :
 
 ```javascript
-angular.module('app', ['angular-google-analytics']);
+angular.module('app', ['angular-google-sense']);
 ```
 There is no need to include to adsense lib, the directive takes care of it and include it (async) only when it is needed.
 
