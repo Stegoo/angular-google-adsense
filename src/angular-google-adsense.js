@@ -5,7 +5,7 @@
     angular.module('angular-google-adsense', []).
 
     service('Adsense', [function(){
-        this.url = '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        this.url = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
         this.isAlreadyLoaded = false;
     }]).
 
