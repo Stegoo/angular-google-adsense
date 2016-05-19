@@ -19,8 +19,10 @@ There is no need to include to adsense lib, the directive takes care of it and i
 
 ### Use the directive in your html file :
 
-Replace the 'ad-client' and 'ad-slot' attributes with your values
+Replace the 'ad-client' and 'ad-slot' attributes with your values.
+
+The directive also supports the optional 'ad-format' [attribute](https://support.google.com/adsense/answer/32712?hl=en).
 
 ```html
-<adsense ad-client="ca-pub-0123" ad-slot="123456789" inline-style="display:inline-block;width:728px;height:90px"></adsense>
+<adsense ad-client="ca-pub-0123" ad-slot="123456789" inline-style="display:inline-block;width:728px;height:90px" ad-format="auto"></adsense>
 ```
