@@ -9,7 +9,7 @@ This module lets you integrate your google adsense advertisements in your Angula
 
 `bower install angular-google-adsense` or `npm install angular-google-adsense`
 
-Or alternatively, grab the dist/angular-google-adsense.min.js and include it in your project
+Or alternatively, grab the `dist/angular-google-adsense.min.js` file and include it in your project
 
 
 In your application, declare the angular-google-analytics module dependency :
@@ -17,7 +17,7 @@ In your application, declare the angular-google-analytics module dependency :
 ```javascript
 angular.module('app', ['angular-google-adsense']);
 ```
-There is no need to include to adsense lib, the directive takes care of it and include it (async) only when it is needed.
+There is no need to include the adsense lib yourself, the directive takes care of it and include it (async) only when it is needed.
 
 ### Use the directive in your html file :
 
