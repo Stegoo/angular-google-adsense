@@ -1,6 +1,8 @@
 # angular-google-adsense
 
 [![npm version](https://badge.fury.io/js/angular-google-adsense.svg)](https://badge.fury.io/js/angular-google-adsense)
+[![Bower version](https://badge.fury.io/bo/angular-google-adsense.svg)](https://badge.fury.io/bo/angular-google-adsense)
+
 This module lets you integrate your google adsense advertisements in your AngularJS applications easily.
 
 ## Installation
