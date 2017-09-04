@@ -17,10 +17,22 @@
                 adClient : '@',
                 adSlot : '@',
                 inlineStyle : '@',
-                adFormat : '@'
+                adFormat : '@',
+                viewportMinWidth: '@',
+                viewportMaxWidth: '@'
             },
-            template: '<div class="ads"><ins class="adsbygoogle" data-ad-client="{{adClient}}" data-ad-slot="{{adSlot}}" style="{{inlineStyle}}" data-ad-format="{{adFormat}}"></ins></div>',
-            controller: ['Adsense', '$timeout', function (Adsense, $timeout) {
+            template: '<div data-ng-show="adFitInViewport()" class="ads"><ins class="adsbygoogle" data-ad-client="{{adClient}}" data-ad-slot="{{adSlot}}" style="{{inlineStyle}}" data-ad-format="{{adFormat}}"></ins></div>',
+            controller: ['Adsense', '$scope', '$window', '$timeout', function (Adsense, $scope, $window, $timeout) {
+
+                $scope.adFitInViewport = function() {
+                    return !($scope.viewportMinWidth && $window.innerWidth < $scope.viewportMinWidth ||
+                        $scope.viewportMaxWidth && $window.innerWidth > $scope.viewportMaxWidth);
+                }
+
+                if(!$scope.adFitInViewport()) {
+                    return;
+                }
+
                 if (!Adsense.isAlreadyLoaded) {
                     var s = document.createElement('script');
                     s.type = 'text/javascript';
