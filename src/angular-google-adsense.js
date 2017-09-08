@@ -14,14 +14,20 @@
             restrict: 'E',
             replace: true,
             scope : {
-                adClient : '@',
-                adSlot : '@',
-                inlineStyle : '@',
-                adFormat : '@',
-                viewportMinWidth: '@',
-                viewportMaxWidth: '@'
+              adClient : '@',
+              adSlot : '@',
+              adFormat : '@',
+              inlineStyle : '@',
+              viewportMinWidth: '@',
+              viewportMaxWidth: '@'
             },
-            template: '<div data-ng-show="adFitInViewport()" class="ads"><ins class="adsbygoogle" data-ad-client="{{adClient}}" data-ad-slot="{{adSlot}}" style="{{inlineStyle}}" data-ad-format="{{adFormat}}"></ins></div>',
+            template: '<div data-ng-show="adFitInViewport()" class="ads">'
+              + '<ins class="adsbygoogle" '
+              + 'data-ad-client="{{adClient}}" '
+              + 'data-ad-slot="{{adSlot}}" '
+              + 'ng-attr-data-ad-format="{{adFormat || undefined}} '
+              + 'style="{{inlineStyle}}" '
+              + '"></ins></div>',
             controller: ['Adsense', '$scope', '$window', '$timeout', function (Adsense, $scope, $window, $timeout) {
 
                 $scope.adFitInViewport = function() {
