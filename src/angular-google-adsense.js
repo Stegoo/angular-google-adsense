@@ -21,21 +21,19 @@
               viewportMinWidth: '@',
               viewportMaxWidth: '@'
             },
-            template: '<div data-ng-show="adFitInViewport()" class="ads">'
-              + '<ins class="adsbygoogle" '
+            template: '<div data-ng-show="adFitInViewport" class="ads">'
+              + '<ins data-ng-class="{\'adsbygoogle\': adFitInViewport}" '
               + 'data-ad-client="{{adClient}}" '
               + 'data-ad-slot="{{adSlot}}" '
-              + 'ng-attr-data-ad-format="{{adFormat || undefined}} '
+              + 'ng-attr-data-ad-format="{{adFormat || undefined}}" '
               + 'style="{{inlineStyle}}" '
               + '"></ins></div>',
             controller: ['Adsense', '$scope', '$window', '$timeout', function (Adsense, $scope, $window, $timeout) {
 
-                $scope.adFitInViewport = function() {
-                    return !($scope.viewportMinWidth && $window.innerWidth < $scope.viewportMinWidth ||
-                        $scope.viewportMaxWidth && $window.innerWidth > $scope.viewportMaxWidth);
-                }
-
-                if(!$scope.adFitInViewport()) {
+                $scope.adFitInViewport = true;
+                if(($scope.viewportMinWidth && $window.innerWidth < $scope.viewportMinWidth) ||
+                  ($scope.viewportMaxWidth && $window.innerWidth > $scope.viewportMaxWidth)) {
+                    $scope.adFitInViewport = false;
                     return;
                 }
 
