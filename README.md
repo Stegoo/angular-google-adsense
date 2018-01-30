@@ -25,7 +25,7 @@ Replace the 'ad-client' and 'ad-slot' attributes with your values.
 
 The directive also supports the following optional attributes:
 
-* [ad-format](https://support.google.com/adsense/answer/32712?hl=en).
+* [ad-format](https://support.google.com/adsense/answer/32712?hl=en)
 * ad-layout
 * ad-layout-key
 
