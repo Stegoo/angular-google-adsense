@@ -17,6 +17,8 @@
               adClient : '@',
               adSlot : '@',
               adFormat : '@',
+              adLayout: '@',
+              adLayoutKey: '@',
               inlineStyle : '@',
               viewportMinWidth: '@',
               viewportMaxWidth: '@'
@@ -26,6 +28,8 @@
               + 'data-ad-client="{{adClient}}" '
               + 'data-ad-slot="{{adSlot}}" '
               + 'ng-attr-data-ad-format="{{adFormat || undefined}}" '
+              + 'ng-attr-data-ad-layout="{{adLayout || undefined}}" '
+              + 'ng-attr-data-ad-layout-key="{{adLayoutKey || undefined}}" '
               + 'style="{{inlineStyle}}" '
               + '"></ins></div>',
             controller: ['Adsense', '$scope', '$window', '$timeout', function (Adsense, $scope, $window, $timeout) {
